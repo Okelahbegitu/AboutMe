@@ -13,7 +13,7 @@ if (intro) {
   window.setTimeout(() => {
     intro.style.opacity = '0'
     intro.style.pointerEvents = 'none'
-  }, 1400)
+  }, 500)
 
   intro.addEventListener(
     'transitionend',

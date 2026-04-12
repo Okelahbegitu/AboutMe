@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>aboutme</title>
 </head>
 
@@ -19,16 +23,20 @@
     <img src="/src/BrodyHead.png" id="logo" class="w-32 image-smooth">
   </div>
 
-  <div class="pixel-panel bg-purple-500">
-    <div class=" p-8 rounded-lg shadow-lg text-center">
-      <h1 class="text-4xl font-bold mb-4 font-press-start">Hi, I'm Brody!</h1>
-      <p class="text-lg mb-6 font-press-start">I'm a software developer with a passion for creating innovative solutions. I specialize in
-        web development and have experience with various programming languages and frameworks.</p>
-      <a href="#projects" class="bg-[#6b6375] hover:bg-[#5a5263] text-white font-bold py-2 px-4 rounded">View My
-        Projects</a>
-    </div>
+<div data-aos="fade-up" data-aos-delay="2000" class="min-h-full p-15 bg-[#1a1a1a]">
+  <h1 class="text-4xl font-bold mb-4 text-white">Hi, I'm Brody!</h1>
+  <p class="text-gray-400">A junior game developer that about creating engaging experiences.</p>
+  <div data-aos="fade-right" data-aos-delay="2500" class="flex space-x-4 mt-6">
+    <img src="/src/processed_image.png" alt="Unity" class="h-8 w-auto object-contain image-smooth" />
+    <img src="/src/Logo_Aseprite.svg.png" class="w-8 image-smooth" />
+    <img src="/src/processed_cs (1).png" class="w-8 image-smooth" />
+    <img src="/src/BlockBench.webp" class="w-8 image-smooth" />
+
   </div>
+</div>
+
   <script type="module" src="/src/main.js"></script>
+  <script>AOS.init();</script>
 </body>
 
 </html>
