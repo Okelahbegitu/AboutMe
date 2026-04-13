@@ -10,9 +10,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>aboutme</title>
 </head>
 
@@ -23,20 +30,161 @@
     <img src="/src/BrodyHead.png" id="logo" class="w-32 image-smooth">
   </div>
 
-<div data-aos="fade-up" data-aos-delay="2000" class="min-h-full p-15 bg-[#1a1a1a]">
-  <h1 class="text-4xl font-bold mb-4 text-white">Hi, I'm Brody!</h1>
-  <p class="text-gray-400">A junior game developer that about creating engaging experiences.</p>
-  <div data-aos="fade-right" data-aos-delay="2500" class="flex space-x-4 mt-6">
-    <img src="/src/processed_image.png" alt="Unity" class="h-8 w-auto object-contain image-smooth" />
-    <img src="/src/Logo_Aseprite.svg.png" class="w-8 image-smooth" />
-    <img src="/src/processed_cs (1).png" class="w-8 image-smooth" />
-    <img src="/src/BlockBench.webp" class="w-8 image-smooth" />
+  <div class="relative min-h-screen overflow-hidden">
 
+    <div class="absolute inset-0 z-0">
+      <!-- Slider main container -->
+      <div class="swiper absolute inset-0 w-full h-full">
+
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <img src="/src/liveIncode.png" class="w-full h-full object-cover" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="/src/3dmodel.png" class="w-full h-full object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/src/LiveInProject.png" class="w-full h-full object-cover" />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- overlay gelap (biar teks kebaca) -->
+    <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+    <!-- CONTENT KAMU -->
+    <div data-aos="fade-up" class="relative z-20 min-h-full p-15">
+
+      <h1 class="text-4xl font-bold mb-4 text-white">
+        Hi, I'm Brody!
+      </h1>
+
+      <p class="text-[#FA9A1D] mt-2">
+        Game Developer • Pixel Artist • 3D Modeler Low Poly
+      </p>
+
+      <p class="text-gray-400 mt-3">
+        A junior developer who enjoys coding, making games, and pixel art.
+
+      </p>
+
+      <div data-aos="fade-right" class="flex space-x-4 mt-6">
+        <img src="/src/processed_image.png" class="h-8" />
+        <img src="/src/Logo_Aseprite.svg.png" class="w-8" />
+        <img src="/src/processed_cs (1).png" class="w-8" />
+        <img src="/src/BlockBench.webp" class="w-8" />
+      </div>
+    </div>
   </div>
-</div>
+
+
+  <div class="flex justify-between">
+    <div class="mt-15 mx-15">
+      <h2 class="text-4xl font-bold mb-4">
+        About Me
+      </h2>
+      <div class="pixel-panel bg-[#e5d8c3] p-4 max-w-[500px]">
+
+        <div class="flex gap-4 items-center">
+
+          <!-- FOTO -->
+          <div class="w-24 h-32 bg-[#7141AD] flex items-center justify-center">
+            <img src="/src/BrodyHead.png" class="w-16">
+          </div>
+
+          <!-- DATA -->
+          <div class="text-black text-sm space-y-1">
+            <p><span class="font-bold">Name:</span> Muhammad Fardan</p>
+            <p><span class="font-bold">Birth:</span> Aug 4, 2009</p>
+            <p><span class="font-bold">Location:</span> Samarinda</p>
+            <p><span class="font-bold">Hobbies:</span> Coding, Gaming</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="mt-15 mx-15">
+
+      <h2 class="text-2xl font-bold mb-4">
+        Programming Languages I Use
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+
+        <!-- CHART -->
+        <div class="pixel-panel bg-[#7141AD] flex justify-center">
+          <div class="w-fit h-34">
+            <canvas id="programing-chart"></canvas>
+          </div>
+        </div>
+
+        <!-- CHARACTER -->
+        <div class="flex justify-center">
+          <img src="./src/BrodyWorking.gif" class="w-40 pixel-art">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
 
   <script type="module" src="/src/main.js"></script>
   <script>AOS.init();</script>
+
+
+  <script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs'
+
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal', // ❗ jangan vertical untuk background
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('programing-chart').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['C# (Unity)', 'Java', 'Js', 'Lua (Roblox)'],
+        datasets: [{
+          label: 'Mastery Level %',
+          data: [50, 25, 20, 5],
+          borderWidth: 0
+        }]
+      },
+
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: {
+              color: '#ffffff'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
 </body>
 
 </html>
