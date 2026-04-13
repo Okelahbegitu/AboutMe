@@ -1,5 +1,68 @@
 @import "tailwindcss";
-@import "./input.css";
+
+.image-pixel {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.image-smooth {
+  image-rendering: auto;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.glow {
+  animation: glow 1.2s ease-in-out;
+}
+
+@layer components {
+  .pixel-panel {
+    @apply p-4 text-white;
+
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    border: 45px solid transparent;
+    border-image: url("/Box.png") 8 stretch;
+    transition: border-color 0.3s;
+    border-radius: 35px;
+
+    margin-bottom: 24px;
+    padding: 15px;
+  }
+}
+
+@layer base {
+  html,
+  body {
+    min-height: 100%;
+    background-color: #1a1a1a;
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .font-press-start {
+    font-family: "Press Start 2P", monospace !important;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+  }
+}
 
 :root {
   --text: #6b6375;
