@@ -38,7 +38,7 @@
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     border: 45px solid transparent;
-    border-image-source: url("./../public/Box.png");
+    border-image-source: url("/Box.png");
     border-image-slice: 8;
     border-image-repeat: stretch;
 
