@@ -16,6 +16,10 @@
     "vite": "^8.0.4"
   },
   "dependencies": {
-    "gsap": "^3.14.2"
+    "aos": "^2.3.4",
+    "chart.js": "^4.5.1",
+    "embla-carousel": "^8.5.2",
+    "gsap": "^3.14.2",
+    "swiper": "^11.2.6"
   }
 }
