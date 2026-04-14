@@ -18,7 +18,6 @@ export function renderApp(rootElement) {
     ${ProfileSection()}
     ${GrassDivider()}
     ${ProjectGameSection()}
-    ${GameSection()}
     ${Footer()}
   `;
 }
